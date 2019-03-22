@@ -7,3 +7,4 @@ def grade(gpa):
         return "B"
 
 print(grade(2.0))
+print("Malin testar")
