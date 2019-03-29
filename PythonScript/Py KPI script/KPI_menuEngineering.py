@@ -7,11 +7,7 @@ from bokeh.models.glyphs import Text
 
 
 
-<<<<<<< HEAD
 # outputfil för graf i html
-=======
-# output to static HTML file
->>>>>>> 1c8babde7e2c63f4db7203b8de677d0dc3628433
 output_file("KPI_menuEngineering.html")
 
 p = figure(plot_width=400, plot_height=400)
