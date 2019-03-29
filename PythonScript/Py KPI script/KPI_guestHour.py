@@ -1,6 +1,6 @@
 from bokeh.plotting import figure, show, output_file
 
-output_file('vbar.html')
+output_file('KPI_guestHour.html')
 
 p = figure(plot_width=400, plot_height=400)
 p.vbar(x=[10.00, 11.00, 12.00, 13.00, 14.00, 15.00, 16.00, 17.00, 18.00, 19.00, 20.00, 21.00, 22.00, 23.00], width=0.5, bottom=0,

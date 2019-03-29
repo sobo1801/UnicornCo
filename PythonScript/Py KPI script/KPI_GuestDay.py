@@ -4,7 +4,7 @@ from bokeh.plotting import figure, output_file, show
 #Här skriver du kod för att hantera ditt dataset som är sparat i df
 #from bokeh.plotting import figure, output_file, show
 
-output_file("line.html")
+output_file("KPI_GuestDay.html")
 
 p = figure(plot_width=500, plot_height=500)
 
