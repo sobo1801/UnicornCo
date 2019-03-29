@@ -13,7 +13,7 @@ df_weahter = pd.read_excel('RestaurantTrend_data.xlsx')
 
 output_file("RestaurantTrend.html")
 
-print(df)
+#print(df)
 
 #Här skriver du kod för att hantera ditt dataset som är sparat i df
 
