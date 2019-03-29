@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.2.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.2.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="0fe93f84-5f4a-4fb8-9525-aa0ce65402da"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1125">
+          {"4a65bef3-9014-4c5f-9dbf-27e17e40f4a4":{"roots":{"references":[{"attributes":{"fields":[]},"id":"1025","type":"Stack"},{"attributes":{},"id":"1054","type":"UnionRenderers"},{"attributes":{"fields":["0-24 \u00e5r"]},"id":"1026","type":"Stack"},{"attributes":{},"id":"1038","type":"CategoricalTickFormatter"},{"attributes":{"fields":["0-24 \u00e5r"]},"id":"1027","type":"Stack"},{"attributes":{"plot":null,"text":"Befolkning per region"},"id":"1002","type":"Title"},{"attributes":{"label":{"value":"25-64 \u00e5r"},"renderers":[{"id":"1046","type":"GlyphRenderer"}]},"id":"1055","type":"LegendItem"},{"attributes":{"fields":["0-24 \u00e5r","25-64 \u00e5r"]},"id":"1028","type":"Stack"},{"attributes":{"below":[{"id":"1013","type":"CategoricalAxis"}],"left":[{"id":"1017","type":"LinearAxis"}],"outline_line_color":{"value":null},"plot_height":500,"plot_width":800,"renderers":[{"id":"1013","type":"CategoricalAxis"},{"id":"1016","type":"Grid"},{"id":"1017","type":"LinearAxis"},{"id":"1021","type":"Grid"},{"id":"1041","type":"Legend"},{"id":"1034","type":"GlyphRenderer"},{"id":"1046","type":"GlyphRenderer"},{"id":"1059","type":"GlyphRenderer"}],"title":{"id":"1002","type":"Title"},"toolbar":{"id":"1023","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"1005","type":"FactorRange"},"x_scale":{"id":"1009","type":"CategoricalScale"},"y_range":{"id":"1007","type":"DataRange1d"},"y_scale":{"id":"1011","type":"LinearScale"}},"id":"1003","subtype":"Figure","type":"Plot"},{"attributes":{"fields":["0-24 \u00e5r","25-64 \u00e5r"]},"id":"1029","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"1029","type":"Stack"}},"fill_color":{"value":"#e84d60"},"line_color":{"value":"#e84d60"},"top":{"expr":{"id":"1030","type":"Stack"}},"width":{"value":0.9},"x":{"field":"Region"}},"id":"1057","type":"VBar"},{"attributes":{"fields":["0-24 \u00e5r","25-64 \u00e5r","65+ \u00e5r"]},"id":"1030","type":"Stack"},{"attributes":{"bottom":{"expr":{"id":"1029","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"1030","type":"Stack"}},"width":{"value":0.9},"x":{"field":"Region"}},"id":"1058","type":"VBar"},{"attributes":{"callback":null,"factors":["Stockholms l\u00e4n","V\u00e4stra G\u00f6talands l\u00e4n","Sk\u00e5ne l\u00e4n","\u00d6sterg\u00f6tlands l\u00e4n","Uppsala l\u00e4n","J\u00f6nk\u00f6pings l\u00e4n","Hallands l\u00e4n","\u00d6rebro l\u00e4n","S\u00f6dermanlands l\u00e4n","G\u00e4vleborgs l\u00e4n","Dalarnas l\u00e4n","V\u00e4rmlands l\u00e4n","V\u00e4stmanlands l\u00e4n","V\u00e4sterbottens l\u00e4n","Norrbottens l\u00e4n","V\u00e4sternorrlands l\u00e4n","Kalmar l\u00e4n","Kronobergs l\u00e4n","Blekinge l\u00e4n","J\u00e4mtlands l\u00e4n","Gotlands l\u00e4n"],"range_padding":0.1},"id":"1005","type":"FactorRange"},{"attributes":{"data_source":{"id":"1001","type":"ColumnDataSource"},"glyph":{"id":"1057","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"65+ \u00e5r","nonselection_glyph":{"id":"1058","type":"VBar"},"selection_glyph":null,"view":{"id":"1060","type":"CDSView"}},"id":"1059","type":"GlyphRenderer"},{"attributes":{"source":{"id":"1001","type":"ColumnDataSource"}},"id":"1047","type":"CDSView"},{"attributes":{"callback":null,"start":0},"id":"1007","type":"DataRange1d"},{"attributes":{"source":{"id":"1001","type":"ColumnDataSource"}},"id":"1060","type":"CDSView"},{"attributes":{"bottom":{"expr":{"id":"1025","type":"Stack"}},"fill_color":{"value":"#c9d9d3"},"line_color":{"value":"#c9d9d3"},"top":{"expr":{"id":"1026","type":"Stack"}},"width":{"value":0.9},"x":{"field":"Region"}},"id":"1032","type":"VBar"},{"attributes":{},"id":"1009","type":"CategoricalScale"},{"attributes":{"label":{"value":"65+ \u00e5r"},"renderers":[{"id":"1059","type":"GlyphRenderer"}]},"id":"1068","type":"LegendItem"},{"attributes":{"bottom":{"expr":{"id":"1025","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"1026","type":"Stack"}},"width":{"value":0.9},"x":{"field":"Region"}},"id":"1033","type":"VBar"},{"attributes":{"data_source":{"id":"1001","type":"ColumnDataSource"},"glyph":{"id":"1032","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"0-24 \u00e5r","nonselection_glyph":{"id":"1033","type":"VBar"},"selection_glyph":null,"view":{"id":"1035","type":"CDSView"}},"id":"1034","type":"GlyphRenderer"},{"attributes":{},"id":"1011","type":"LinearScale"},{"attributes":{"source":{"id":"1001","type":"ColumnDataSource"}},"id":"1035","type":"CDSView"},{"attributes":{"axis_label":"Region","formatter":{"id":"1038","type":"CategoricalTickFormatter"},"major_label_orientation":0.785,"minor_tick_line_color":{"value":null},"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1014","type":"CategoricalTicker"}},"id":"1013","type":"CategoricalAxis"},{"attributes":{},"id":"1014","type":"CategoricalTicker"},{"attributes":{},"id":"1040","type":"BasicTickFormatter"},{"attributes":{"items":[{"id":"1042","type":"LegendItem"},{"id":"1055","type":"LegendItem"},{"id":"1068","type":"LegendItem"}],"orientation":"horizontal","plot":{"id":"1003","subtype":"Figure","type":"Plot"}},"id":"1041","type":"Legend"},{"attributes":{"grid_line_color":{"value":null},"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1014","type":"CategoricalTicker"}},"id":"1016","type":"Grid"},{"attributes":{"bottom":{"expr":{"id":"1027","type":"Stack"}},"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"expr":{"id":"1028","type":"Stack"}},"width":{"value":0.9},"x":{"field":"Region"}},"id":"1045","type":"VBar"},{"attributes":{"axis_label":"Befolkning","formatter":{"id":"1040","type":"BasicTickFormatter"},"minor_tick_line_color":{"value":null},"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1018","type":"BasicTicker"}},"id":"1017","type":"LinearAxis"},{"attributes":{"callback":null,"data":{"0-24 \u00e5r":[693626,496437,402691,137215,115026,108911,96511,90016,86202,78767,79169,77062,78959,78763,67013,67080,66661,60192,45064,36002,15468],"25-64 \u00e5r":[1278244,881776,693516,230087,191513,177321,161393,148155,142288,139493,138349,137591,135570,134452,123461,119457,117671,97499,77069,63957,28777],"65+ \u00e5r":[372254,331601,265957,94281,69815,74593,71448,64081,66205,68287,69673,66829,59400,56939,60023,58916,60338,42195,37551,30321,15004],"Region":["Stockholms l\u00e4n","V\u00e4stra G\u00f6talands l\u00e4n","Sk\u00e5ne l\u00e4n","\u00d6sterg\u00f6tlands l\u00e4n","Uppsala l\u00e4n","J\u00f6nk\u00f6pings l\u00e4n","Hallands l\u00e4n","\u00d6rebro l\u00e4n","S\u00f6dermanlands l\u00e4n","G\u00e4vleborgs l\u00e4n","Dalarnas l\u00e4n","V\u00e4rmlands l\u00e4n","V\u00e4stmanlands l\u00e4n","V\u00e4sterbottens l\u00e4n","Norrbottens l\u00e4n","V\u00e4sternorrlands l\u00e4n","Kalmar l\u00e4n","Kronobergs l\u00e4n","Blekinge l\u00e4n","J\u00e4mtlands l\u00e4n","Gotlands l\u00e4n"],"\u00c5r":[2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018,2018]},"selected":{"id":"1053","type":"Selection"},"selection_policy":{"id":"1054","type":"UnionRenderers"}},"id":"1001","type":"ColumnDataSource"},{"attributes":{"label":{"value":"0-24 \u00e5r"},"renderers":[{"id":"1034","type":"GlyphRenderer"}]},"id":"1042","type":"LegendItem"},{"attributes":{},"id":"1018","type":"BasicTicker"},{"attributes":{"data_source":{"id":"1001","type":"ColumnDataSource"},"glyph":{"id":"1044","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"name":"25-64 \u00e5r","nonselection_glyph":{"id":"1045","type":"VBar"},"selection_glyph":null,"view":{"id":"1047","type":"CDSView"}},"id":"1046","type":"GlyphRenderer"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1022","type":"HoverTool"}]},"id":"1023","type":"Toolbar"},{"attributes":{"bottom":{"expr":{"id":"1027","type":"Stack"}},"fill_color":{"value":"#718dbf"},"line_color":{"value":"#718dbf"},"top":{"expr":{"id":"1028","type":"Stack"}},"width":{"value":0.9},"x":{"field":"Region"}},"id":"1044","type":"VBar"},{"attributes":{"dimension":1,"plot":{"id":"1003","subtype":"Figure","type":"Plot"},"ticker":{"id":"1018","type":"BasicTicker"}},"id":"1021","type":"Grid"},{"attributes":{"callback":null,"tooltips":"$name : @$name"},"id":"1022","type":"HoverTool"},{"attributes":{},"id":"1053","type":"Selection"}],"root_ids":["1003"]},"title":"Bokeh Application","version":"1.0.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1125').textContent;
+                  var render_items = [{"docid":"4a65bef3-9014-4c5f-9dbf-27e17e40f4a4","roots":{"1003":"0fe93f84-5f4a-4fb8-9525-aa0ce65402da"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
