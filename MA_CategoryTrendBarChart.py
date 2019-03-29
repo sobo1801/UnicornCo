@@ -19,6 +19,7 @@ from bokeh.transform import transform, factor_cmap
 from bokeh.palettes import Spectral11
 from bokeh.transform import dodge
 from bokeh.core.properties import value
+from math import pi
 
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=LAPTOP-7DE79HGT;'
@@ -57,5 +58,6 @@ p.vbar(x=dodge('Kategori',  0.0,  range=p.x_range), top='År2018', width=0.2, so
 p.xgrid.grid_line_color = None
 p.legend.location = 'top_left'
 p.legend.orientation = 'horizontal'
+p.xaxis.major_label_orientation = pi/4
 
 show(p)

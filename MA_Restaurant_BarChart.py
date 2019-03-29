@@ -19,6 +19,7 @@ from bokeh.transform import transform, factor_cmap
 from bokeh.palettes import Spectral11
 from bokeh.transform import dodge
 from bokeh.core.properties import value
+from math import pi
 
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=LAPTOP-7DE79HGT;'
@@ -30,7 +31,7 @@ df = pd.read_sql_query("""select F1 as Kategori, [2017] as År2017, [2018] as Å
 from utveckling""", conn)
                      
 
-output_file("dodged_bars.html")
+output_file("MA_Restaurant_BarChart.html")
 
 data = df.to_dict(orient='list')
 print(data)
@@ -42,7 +43,7 @@ source = ColumnDataSource(data=data)
 
 
 p = figure(x_range=idx, y_range=(0, df[['År2017', 'År2018']].values.max() + 5), 
-           plot_height=250, title="Fruit Counts by Year", 
+           plot_height=250, title="Sales per category and year", 
            toolbar_location=None, tools="")
 
 
@@ -57,5 +58,6 @@ p.vbar(x=dodge('Kategori',  0.0,  range=p.x_range), top='År2018', width=0.2, so
 p.xgrid.grid_line_color = None
 p.legend.location = 'top_left'
 p.legend.orientation = 'horizontal'
+p.xaxis.major_label_orientation = pi/4
 
 show(p)
