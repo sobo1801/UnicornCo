@@ -1,63 +1,49 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 28 14:37:56 2019
-
-@author: fatim
-"""
-
 #Import av Python ODBC och Panda dataframe(tabeller i Python)
-
-
-#import av bokeh-funktioner som används i barchart
 import pandas as pd
-import pyodbc
 import numpy as np
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter, FactorRange
 from bokeh.models.tools import HoverTool
 from bokeh.transform import transform, factor_cmap
 from bokeh.palettes import Spectral11
-from bokeh.transform import dodge
-from bokeh.core.properties import value
-from math import pi
 
-conn = pyodbc.connect('Driver={SQL Server};'
-                      'Server=LAPTOP-7DE79HGT;'
-                      'Database=Restaurang;'
-                     'Trusted_Connection=yes;')
 
 #sparar ner sql-datan i en panda dataframe
-df = pd.read_sql_query("""select F1 as Kategori, [2017] as År2017, [2018] as År2018
-from utveckling""", conn)
-                     
+df_weahter = pd.read_excel('RestaurantTrend_data.xlsx')
 
-output_file("MA_Restaurant_BarChart.html")
+output_file("RestaurantTrend.html")
 
-data = df.to_dict(orient='list')
-print(data)
+print(df)
 
-idx = df['Kategori'].tolist()
-print(idx)
+#Här skriver du kod för att hantera ditt dataset som är sparat i df
 
-source = ColumnDataSource(data=data)
+#Här skriver du din Bokeh Api-kod
+p = figure(plot_width=600, plot_height=400, x_range=df['År'], title = 'Mattrender, procentuell förändring',
+           toolbar_location="above")
 
-
-p = figure(x_range=idx, y_range=(0, df[['År2017', 'År2018']].values.max() + 5), 
-           plot_height=250, title="Sales per category and year", 
-           toolbar_location=None, tools="")
-
-
-p.vbar(x=dodge('Kategori', -0.25, range=p.x_range), top='År2017', width=0.2, source=source,
-       color="#c9d9d3", legend=value("År2017"))
-
-p.vbar(x=dodge('Kategori',  0.0,  range=p.x_range), top='År2018', width=0.2, source=source,
-       color="#718dbf", legend=value("År2018"))
+p.line(df['År'], df['Hotellrestauranger'], color='#a6cee3', alpha=0.8, line_width=3, legend = ('Hotellrestauranger'))
+p.line(df['År'], df['Caféer'], color='#1f78b4', alpha=0.8, line_width=3, legend = ('Caféer'))
+p.line(df['År'], df['Snabbmatsrestauranger'], color='#b2df8a', alpha=0.8, line_width=3, legend = ('Snabbmatsrestauranger'))
+p.line(df['År'], df['Lunch- och kvällsrestauranger'], color='#33a02c', alpha=0.8, line_width=3, legend = ('Lunch- och kvällsrestauranger'))
+p.line(df['År'], df['Nöjesrestauranger'], color='#fb9a99', alpha=0.8, line_width=3, legend = ('Nöjesrestauranger'))
+p.line(df['År'], df['Trafiknära restauranger'], color='#984ea3', alpha=0.8, line_width=3, legend = ('Trafiknära restauranger'))
+p.line(df['År'], df['Personalrestauranger'], color='#fdbf6f', alpha=0.8, line_width=3, legend = ('Personalrestauranger'))
 
 
-#p.x_range.range_padding = 0.2
+hover = HoverTool()
+hover.tooltips=[
+    ('Kategori: ', ''),
+    ('Värde: ', '@value')
+]
+p.add_tools(hover)
+
+
 p.xgrid.grid_line_color = None
-p.legend.location = 'top_left'
-p.legend.orientation = 'horizontal'
-p.xaxis.major_label_orientation = pi/4
+p.legend.location = 'bottom_left'
+p.legend.orientation = "vertical"
+p.legend.label_text_font_size = '8pt'
+p.legend.spacing = 0
+#Möjliggör att välja bort vissa kategorier och bara visa de vi vill
+p.legend.click_policy="hide"
 
 show(p)
