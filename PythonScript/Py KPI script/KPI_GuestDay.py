@@ -2,7 +2,13 @@
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
 
+<<<<<<< HEAD
 #output fil i html
+=======
+#Här skriver du kod för att hantera ditt dataset som är sparat i df
+#from bokeh.plotting import figure, output_file, show
+
+>>>>>>> 1c8babde7e2c63f4db7203b8de677d0dc3628433
 output_file("KPI_GuestDay.html")
 
 p = figure(plot_width=500, plot_height=500)

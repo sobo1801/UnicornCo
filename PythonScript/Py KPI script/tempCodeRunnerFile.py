@@ -1,4 +1,3 @@
-#import panda
 import pandas as pd
 import bokeh.sampledata
 #bokeh.sampledata.download() - Installed once, then made to comment.
@@ -8,8 +7,7 @@ from bokeh.sampledata.stocks import AAPL
 df = pd.DataFrame(AAPL)
 df['date'] = pd.to_datetime(df['date'])
 
-#outputfil för graf KPI_revenueYeat.html
-output_file("KPI_revenueYeat.html")
+output_file("KPI_revenueYear.html")
 
 # create a new plot with a datetime axis type
 p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")

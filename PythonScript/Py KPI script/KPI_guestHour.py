@@ -1,7 +1,10 @@
 #importera bokehbibliotek
 from bokeh.plotting import figure, show, output_file
 
+<<<<<<< HEAD
 #outputfil för graf i html
+=======
+>>>>>>> 1c8babde7e2c63f4db7203b8de677d0dc3628433
 output_file('KPI_guestHour.html')
 
 p = figure(plot_width=400, plot_height=400)
