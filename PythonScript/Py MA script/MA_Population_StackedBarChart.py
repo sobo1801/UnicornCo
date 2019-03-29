@@ -15,7 +15,7 @@ from bokeh.io import show, output_file
 
   
 # read data in dataframe 
-df_befolkning = pd.read_csv('Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
+df_befolkning = pd.read_csv('Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
 df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
 
 data = df_befolkning.to_dict(orient='list')

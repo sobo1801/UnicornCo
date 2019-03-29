@@ -9,10 +9,12 @@ from bokeh.palettes import Spectral11
 from bokeh.transform import dodge
 from bokeh.core.properties import value
 from math import pi
+import openpyxl
+import xlrd
+
 
 #sparar ner sql-datan i en panda dataframe
-df = pd.read_excel('RestaurantRevenue_data.xlsx')
-                     
+df = pd.read_excel('Data\RestaurantRevenue_data.xlsx')      
 
 output_file("MA_Restaurant_BarChart.html")
 

@@ -9,6 +9,7 @@ from bokeh.palettes import Spectral11
 
 
 #sparar ner sql-datan i en panda dataframe
+#url = 'https://github.com/sobo1801/UnicornCo/blob/master/Data/RestaurantTrend_data.xlsx'
 df = pd.read_excel('RestaurantTrend_data.xlsx')
 
 output_file("MA_MarkettrendLineChart.html")

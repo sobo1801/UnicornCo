@@ -7,7 +7,7 @@ from bokeh.transform import transform, factor_cmap
 
 
 #sparar ner sql-datan i en panda dataframe
-df_weahter = pd.read_excel('Weather_data.xlsx')
+df_weahter = pd.read_excel('Data\Weather_data.xlsx')
 
 output_file('MA_WeatherScatterPlot.html')
 
