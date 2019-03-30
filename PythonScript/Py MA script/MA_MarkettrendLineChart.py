@@ -9,10 +9,13 @@ from bokeh.palettes import Spectral11
 
 
 #sparar ner sql-datan i en panda dataframe
-#url = 'https://github.com/sobo1801/UnicornCo/blob/master/Data/RestaurantTrend_data.xlsx'
+#url = 'https://github.com/sobo1801/UnicornCo/blob/master/Data/RestaurantTrend_data.xlsx'  TA BORT???
 df = pd.read_excel('Data\RestaurantTrend_data.xlsx')
 
 output_file("MA_MarkettrendLineChart.html")
+
+#Går ej att läsa in årtalen som en x_range i figuren så därav omvandlar vi dem till en lista först.
+df['År'] = list(map(str, df['År']))
 
 #print(df)
 
@@ -31,19 +34,15 @@ p.line(df['År'], df['Trafiknära restauranger'], color='#984ea3', alpha=0.8, li
 p.line(df['År'], df['Personalrestauranger'], color='#fdbf6f', alpha=0.8, line_width=3, legend = ('Personalrestauranger'))
 
 
-hover = HoverTool()
-hover.tooltips=[
-    ('Kategori: ', ''),
-    ('Värde: ', '@value')
-]
-p.add_tools(hover)
-
 
 p.xgrid.grid_line_color = None
+
+#Placering av kategoribeskrivningen:
 p.legend.location = 'bottom_left'
 p.legend.orientation = "vertical"
 p.legend.label_text_font_size = '8pt'
 p.legend.spacing = 0
+
 #Möjliggör att välja bort vissa kategorier och bara visa de vi vill
 p.legend.click_policy="hide"
 
