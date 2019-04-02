@@ -15,7 +15,7 @@ from bokeh.io import show, output_file
 
   
 # read data in dataframe 
-df_befolkning = pd.read_csv('Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
+df_befolkning = pd.read_csv('UnicornCo\Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
 df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
 
 data = df_befolkning.to_dict(orient='list')
@@ -25,7 +25,7 @@ colors = ['#c9d9d3', '#718dbf', '#e84d60']
 
 source = ColumnDataSource(data)
 
-p = figure(x_range=Regions, plot_height=500, plot_width=800, title='Befolkning per region',
+p = figure(x_range=Regions, plot_height=480, title='Befolkning per region',
            toolbar_location=None, tools='hover', tooltips='$name : @$name')
 
 p.vbar_stack(categories, x='Region', width=0.9, color=colors, source=source, legend=[['0-24 år'],['25-64 år'],['65+ år']])
