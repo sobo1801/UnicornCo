@@ -13,7 +13,7 @@ import xlrd
 
 #sparar ner sql-datan i en panda dataframe
 # Måste ange columnnamnen att läsa in i det fall de innehåller siffror.
-df = pd.read_excel('Data\RestaurantRevenue_data.xlsx', names = ['Kategori', '2017', '2018'])      
+df = pd.read_excel('UnicornCo\Data\RestaurantRevenue_data.xlsx', names = ['Kategori', '2017', '2018'])      
 
 output_file("MA_Restaurant_BarChart.html")
 
@@ -27,7 +27,7 @@ source = ColumnDataSource(df)
 
 
 p = figure(x_range=idx, y_range=(0, df[['2017', '2018']].values.max() + 5), 
-           plot_height=250, title="Sales per category and year", 
+           plot_height=480, title="Sales per category and year", 
            toolbar_location=None, tools="")
 
 

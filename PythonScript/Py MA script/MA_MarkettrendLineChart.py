@@ -11,7 +11,7 @@ import xlrd
 
 #sparar ner sql-datan i en panda dataframe
 #url = 'https://github.com/sobo1801/UnicornCo/blob/master/Data/RestaurantTrend_data.xlsx'  TA BORT???
-df = pd.read_excel('Data\RestaurantTrend_data.xlsx')
+df = pd.read_excel('UnicornCo\Data\RestaurantTrend_data.xlsx')
 
 output_file("MA_MarkettrendLineChart.html")
 
@@ -23,7 +23,7 @@ df['År'] = list(map(str, df['År']))
 #Här skriver du kod för att hantera ditt dataset som är sparat i df
 
 #Här skriver du din Bokeh Api-kod
-p = figure(plot_width=600, plot_height=400, x_range=df['År'], title = 'Mattrender, procentuell förändring',
+p = figure(x_range=df['År'], plot_height=480 , title = 'Mattrender, procentuell förändring',
            toolbar_location="above")
 
 p.line(df['År'], df['Hotellrestauranger'], color='#a6cee3', alpha=0.8, line_width=3, legend = ('Hotellrestauranger'))
