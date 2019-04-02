@@ -13,7 +13,7 @@ import xlrd
 
 #sparar ner sql-datan i en panda dataframe
 # Måste ange columnnamnen att läsa in i det fall de innehåller siffror.
-df = pd.read_excel('UnicornCo\Data\RestaurantRevenue_data.xlsx', names = ['Kategori', '2017', '2018'])      
+df = pd.read_excel('Data\RestaurantRevenue_data.xlsx', names = ['Kategori', '2017', '2018'])      
 
 output_file("MA_Restaurant_BarChart.html")
 

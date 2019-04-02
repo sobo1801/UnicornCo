@@ -10,8 +10,7 @@ import xlrd
 
 
 #sparar ner sql-datan i en panda dataframe
-#url = 'https://github.com/sobo1801/UnicornCo/blob/master/Data/RestaurantTrend_data.xlsx'  TA BORT???
-df = pd.read_excel('UnicornCo\Data\RestaurantTrend_data.xlsx')
+df = pd.read_excel('Data\RestaurantTrend_data.xlsx')
 
 output_file("MA_MarkettrendLineChart.html")
 
@@ -26,13 +25,14 @@ df['År'] = list(map(str, df['År']))
 p = figure(x_range=df['År'], plot_height=480 , title = 'Mattrender, procentuell förändring',
            toolbar_location="above")
 
-p.line(df['År'], df['Hotellrestauranger'], color='#a6cee3', alpha=0.8, line_width=3, legend = ('Hotellrestauranger'))
-p.line(df['År'], df['Caféer'], color='#1f78b4', alpha=0.8, line_width=3, legend = ('Caféer'))
-p.line(df['År'], df['Snabbmatsrestauranger'], color='#b2df8a', alpha=0.8, line_width=3, legend = ('Snabbmatsrestauranger'))
-p.line(df['År'], df['Lunch- och kvällsrestauranger'], color='#33a02c', alpha=0.8, line_width=3, legend = ('Lunch- och kvällsrestauranger'))
-p.line(df['År'], df['Nöjesrestauranger'], color='#fb9a99', alpha=0.8, line_width=3, legend = ('Nöjesrestauranger'))
-p.line(df['År'], df['Trafiknära restauranger'], color='#984ea3', alpha=0.8, line_width=3, legend = ('Trafiknära restauranger'))
-p.line(df['År'], df['Personalrestauranger'], color='#fdbf6f', alpha=0.8, line_width=3, legend = ('Personalrestauranger'))
+
+p.line(df['År'], df['Hotellrestauranger'], color='#5ab4ac', alpha=0.8, line_width=3, legend = ('Hotellrestauranger'))
+p.line(df['År'], df['Caféer'], color='#01665e', alpha=0.8, line_width=3, legend = ('Caféer'))
+p.line(df['År'], df['Snabbmatsrestauranger'], color='#af8dc3', alpha=0.8, line_width=3, legend = ('Snabbmatsrestauranger'))
+p.line(df['År'], df['Lunch- och kvällsrestauranger'], color='#ef8a62', alpha=0.8, line_width=3, legend = ('Lunch- och kvällsrestauranger'))
+p.line(df['År'], df['Nöjesrestauranger'], color='#7fbf7b', alpha=0.8, line_width=3, legend = ('Nöjesrestauranger'))
+p.line(df['År'], df['Trafiknära restauranger'], color='#762a83', alpha=0.8, line_width=3, legend = ('Trafiknära restauranger'))
+p.line(df['År'], df['Personalrestauranger'], color='#b2182b', alpha=0.8, line_width=3, legend = ('Personalrestauranger'))
 
 
 

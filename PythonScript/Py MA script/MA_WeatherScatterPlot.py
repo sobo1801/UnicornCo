@@ -7,7 +7,7 @@ from bokeh.transform import transform, factor_cmap
 
 
 #sparar ner sql-datan i en panda dataframe
-df_weahter = pd.read_excel('UnicornCo\Data\Weather_data.xlsx')
+df_weahter = pd.read_excel('Data\Weather_data.xlsx')
 
 output_file('MA_WeatherScatterPlot.html')
 
@@ -20,7 +20,7 @@ print(df_weahter)
 source = ColumnDataSource(df_weahter)
 
 #Val av färg till plotten
-colors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#fc8d59", "#d73027"]
+colors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#ef8a62", "#b2182b"]
 
 #Anger att cirklarna ska färgsättas utifrån temperaturen i aktuell stad.
 mapper = LinearColorMapper(palette=colors, low=df_weahter.Temepratur_avg.min(), high=df_weahter.Temepratur_avg.max())
