@@ -26,3 +26,12 @@ conn = pyodbc.connect('Driver={SQL Server};'
 
 #sparar ner sql-datan i en panda dataframe
 df = pd.read_sql_query('SELECT * FROM restauranger_sales_trend', conn)
+
+#Färgkoder i diagram och dashboard
+Himmelsblå: #a6cee3, 
+Mörk himmelsblå: #1f78b4, 
+Vårgrön: #b2df8a, 
+Klargrön: #33a02c, 
+Rosa: #fb9a99, 
+Lila: #984ea3,
+Persika: #fdbf6f
