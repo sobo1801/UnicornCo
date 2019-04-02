@@ -20,7 +20,7 @@ print(df_weahter)
 source = ColumnDataSource(df_weahter)
 
 #Val av färg till plotten
-colors = ["#4575b4", "#91bfdb", "#e0f3f8", "#fee090", "#ef8a62", "#b2182b"]
+colors = ["#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020"]
 
 #Anger att cirklarna ska färgsättas utifrån temperaturen i aktuell stad.
 mapper = LinearColorMapper(palette=colors, low=df_weahter.Temepratur_avg.min(), high=df_weahter.Temepratur_avg.max())

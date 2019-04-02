@@ -21,7 +21,7 @@ df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
 data = df_befolkning.to_dict(orient='list')
 Regions = df_befolkning['Region'].tolist()
 categories = df_befolkning.columns.values[2:].tolist()
-colors = ['#c9d9d3', '#718dbf', '#984ea3']
+colors = ['#c9d9d3', '#718dbf', '#f4a582']
 
 source = ColumnDataSource(data)
 
