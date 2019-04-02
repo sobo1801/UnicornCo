@@ -5,7 +5,8 @@ from bokeh.plotting import figure, output_file, show
 from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter, FactorRange
 from bokeh.models.tools import HoverTool
 from bokeh.transform import transform, factor_cmap
-from bokeh.palettes import Spectral11
+#from bokeh.palettes import Spectral11
+import xlrd
 
 
 #sparar ner sql-datan i en panda dataframe
