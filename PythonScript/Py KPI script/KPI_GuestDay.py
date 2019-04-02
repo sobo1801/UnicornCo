@@ -5,7 +5,7 @@ from bokeh.plotting import figure, output_file, show
 #output fil i html
 output_file("KPI_GuestDay.html")
 
-p = figure(plot_width=500, plot_height=500)
+p = figure(plot_width=400, plot_height=400)
 
 # add a line renderer
 
