@@ -10,7 +10,7 @@ import xlrd
 
 
 #sparar ner sql-datan i en panda dataframe
-df = pd.read_excel('Data\RestaurantTrend_data.xlsx')
+df = pd.read_excel('UnicornCo\Data\RestaurantTrend_data.xlsx')
 
 #outputfil i html för graf som genereras av Pythonscript
 output_file("MA_MarkettrendLineChart.html")
@@ -20,7 +20,7 @@ df['År'] = list(map(str, df['År']))
 
 
 #bokehkod för att genrera plot
-p = figure(x_range=df['År'], plot_height=480 , title = 'Restaurangtrender, procentuell förändring',
+p = figure(x_range=df['År'], plot_height=480, plot_width=608, title = 'Restaurangtrender, procentuell förändring',
            toolbar_location="above")
 
 

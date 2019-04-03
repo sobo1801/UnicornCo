@@ -82,7 +82,7 @@ df = pd.DataFrame(AAPL)
 df['date'] = pd.to_datetime(df['date'])
 
 # create a new plot with a datetime axis type
-p_omsättning = figure(plot_width=1300, plot_height=370, x_axis_type="datetime")
+p_omsättning = figure(plot_width=1200, plot_height=370, x_axis_type="datetime")
 
 p_omsättning.line(df['date'], df['close'], color='#762a83', alpha=0.5)
 

@@ -1,10 +1,12 @@
 body {
     margin: 0px;
     margin-right: 0px;
+    margin-left: 0px;
     background-color: beige;
-    padding-left: 200px;
+    padding-left: 170px;
     padding-right: 0px;
-    text-align: center
+    text-align: center;
+    width: fit-content
   }
 
 .header{
@@ -15,6 +17,7 @@ body {
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
     margin-right: 0px;
     width: 100%
 }
@@ -22,7 +25,7 @@ body {
 
 .sidenav {
     height: 100%; 
-    width: 200px;
+    width: 170px;
     position: fixed; 
     z-index: 1; 
     top: 0px; 
@@ -32,24 +35,24 @@ body {
     margin-top: 0px;
     padding-top: 250px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-right: 2px solid gray;
+    border-right: 2px solid gray
   }
 
   
   .sidenav a {
-    padding: 6px 8px 6px 16px;
+    padding: 2px 8px 6px 16px;
     text-decoration: none;
-    font-size: 18px;
-    color: rgb(39, 42, 46);
+    font-size: 20px;
+    color: #01665e;
     display: block;
   }
   
   
   .sidenav a:hover {
-    color: lightgrey;
+    color: #ef8a62;
   }
   
-
+/*
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -61,23 +64,26 @@ body {
 .main {
     flex: 70%;
 }
-
+*/
 
 #weather{
-    background-color: beige
+    background-color: beige;
+    margin-top: 150px
 }
 #population{
-    background-color: beige
+    background-color: beige;
+    margin-top: 150px
 }
 #markettrend{
-    background-color: beige
-}
-#categories{
-    background-color: beige
+    background-color: beige;
+    margin-top: 150px;
+    padding-left: 20px
 }
 #restaurantmap{
-    background-color: beige
+    background-color: beige;
+    margin-top: 150px
 }
 #kpi_dash{
-    background-color: beige
+    background-color: beige;
+    margin-top: 150px
 }
