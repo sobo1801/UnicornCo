@@ -1,4 +1,4 @@
-#Import av Python ODBC och Panda dataframe(tabeller i Python)
+#Import av bokeh och Panda dataframe
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter
@@ -6,18 +6,15 @@ from bokeh.models.tools import HoverTool
 from bokeh.transform import transform, factor_cmap
 
 
-#sparar ner sql-datan i en panda dataframe
+#sparar ner excel-datan i en panda dataframe
 df_weahter = pd.read_excel('Data\Weather_data.xlsx')
 
+#output fil för visualisering i HTML
 output_file('MA_WeatherScatterPlot.html')
 
-#print(df_weahter)
-
-#Här skriver du kod för att hantera ditt dataset som är sparat i df
-
-#Här skriver du din Bokeh Api-kod
-
 source = ColumnDataSource(df_weahter)
+
+#Bokehkod för graf
 
 #Val av färg till plotten
 colors = ["#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020"]
@@ -41,6 +38,7 @@ p.title.text = 'Geografisk data'
 p.xaxis.axis_label = 'Genomsnittlig soltid, sek'
 p.yaxis.axis_label = 'Genomsnittlig vindhastighet, ms'
 
+#kod för att skapa ett hovertool
 hover = HoverTool()
 hover.tooltips=[
     ('Station: ', '@Station'),
@@ -52,4 +50,5 @@ hover.tooltips=[
 
 p.add_tools(hover)
 
+#visa graf i fönster
 show(p)
