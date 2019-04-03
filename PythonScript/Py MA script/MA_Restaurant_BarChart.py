@@ -24,7 +24,7 @@ source = ColumnDataSource(df)
 #bokeh graf kod
 p = figure(x_range=idx, y_range=(0, df[['2017', '2018']].values.max() + 5), 
            plot_height=480, title='Omsättning per kategori och år', 
-           toolbar_location=None, tools="")
+           toolbar_location=None, tools='hover', tooltips=[('2017: ','@2017{(0,0)}'), ('2018: ','@2018{(0,0)}')])
 
 #kod för indivuduella staplar
 p.vbar(x=dodge('Kategori', -0.12, range=p.x_range), top='2017', width=0.2, source=source,
