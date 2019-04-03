@@ -8,7 +8,7 @@ Created on Thu Mar 28 14:06:04 2019
 
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
-from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter, FactorRange
+from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter, FactorRange, NumeralTickFormatter
 from bokeh.models.tools import HoverTool
 from bokeh.core.properties import value
 from bokeh.io import show, output_file
