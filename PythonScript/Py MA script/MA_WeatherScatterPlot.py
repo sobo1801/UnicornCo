@@ -11,7 +11,7 @@ df_weahter = pd.read_excel('Data\Weather_data.xlsx')
 
 output_file('MA_WeatherScatterPlot.html')
 
-print(df_weahter)
+#print(df_weahter)
 
 #Här skriver du kod för att hantera ditt dataset som är sparat i df
 
@@ -26,7 +26,7 @@ colors = ["#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020"]
 mapper = LinearColorMapper(palette=colors, low=df_weahter.Temepratur_avg.min(), high=df_weahter.Temepratur_avg.max())
 
 p = figure(toolbar_location="above", plot_height=480 )
-p.circle(x='Solskenssekunder_avg', y='Vindhastighet_avg',
+p.circle(x='Solskensminuter_avg', y='Vindhastighet_avg',
          source=source,
          size=10,
          fill_color=transform('Temepratur_avg', mapper))
@@ -45,7 +45,7 @@ hover = HoverTool()
 hover.tooltips=[
     ('Station: ', '@Station'),
     ('Medelvind: ', '@Vindhastighet_avg{(0.0)}'),
-    ('Soltid: ', '@Solskenssekunder_avg{(0,0)}'),
+    ('Soltid: ', '@Solskensminuter_avg{(0,0)}'),
     ('Temperatur: ', '@Temepratur_avg{(00.0 a)}')
 ]
 
