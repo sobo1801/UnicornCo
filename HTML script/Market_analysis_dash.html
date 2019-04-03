@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+        
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Market_analysis_dash</title>
-  <link rel="stylesheet" href="styles.css" type="text/css"> <!--länk till css-filen-->
+  <link rel="stylesheet" type="text/css" href="C:\Users\Malin\Desktop\BI-Programspråk\Gruppuppgift\UnicornCo\CSS\styles.css"> <!--länk till css-filen-->
 </head>
-<body>
-  <header>
-    <h1>Market Analysis Dashboard</h1>
-  </header>
+        
+<body> 
+  <div class="header" id="start">
+    <h1><span style="color: orangered">Marketing Analysis Dashboard</span></h1>
+    <p><span style="font-style:italic;">- Vi kommer med solsken till er! -</span></p>  
+  </div>
+        
+    <div class="sidenav">
+        <a href="#start">Start</a><br />
+        <a href="#weather">Väder</a><br />
+        <a href="#markettrend">Marknadstrender</a><br />
+        <a href="#categories">Barchart</a><br />
+        <a href="#population">Befolkning</a><br />
+        <a href="#kpi_dash">Framtida KPI:er</a>
+    </div>
 <!--I detta dokument skriver vi in länkar till våra HTML-filer med Bokeh-grafer-->
+    <div id="weather">
+        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Väder</span></h2>
+      <!--Länk till HTML-fil med framptida KPI:er, hämtas lokalt från mappen-->
+      <iframe width="650" height="500" src="MA_WeatherScatterPlot.html" seamless></iframe> <!-- HTML5-->
+    </div> 
+        
+    <div id="markettrend">
+      <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Marknadstrender</span></h2>
+            <!--Länk till HTML-fil med trendlinje, hämtas lokalt från mappen-->
+            <iframe width="650" height="500" src="MA_MarkettrendLineChart.html" seamless></iframe> <!-- HTML5-->
+    </div>
+    
+    <div id="categories">
+        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Barchart</span></h2>
+      <!--Länk till HTML-fil med barchart, hämtas lokalt från mappen-->
+      <iframe width="650" height="500" src="MA_Restaurant_BarChart.html" seamless></iframe> <!-- HTML5-->
+    </div>
 
-<!--Länk till HTML-fil med barchart, hämtas lokalt från mappen-->
-<iframe width="650" height="500" src="MA_Restaurant_BarChart.html" seamless></iframe> <!-- HTML5-->
+    <div id="population">
+        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Befolkning</span></h2>
+      <!--Länk till HTML-fil med sol och temperatur visualisering, hämtas lokalt från mappen-->
+      <iframe width="650" height="500" src="MA_Population_StackedBarChart.html" seamless></iframe> <!-- HTML5-->
+    </div>
 
-<!--Länk till HTML-fil med trendlinje, hämtas lokalt från mappen-->
+    <div id="kpi_dash">
+        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Framtida KPI:er</span></h2>
+      <!--Länk till HTML-fil med framptida KPI:er, hämtas lokalt från mappen-->
+      <iframe width="650" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiYjY3Yjc1Y2UtN2RmYy00NzNmLThlNWEtYzI4YTQ1MTc0NzI5IiwidCI6ImY1MDU0MTJkLTMxNTAtNGYxNS1hNzA0LWI2Y2UxMjJkZTA0ZCIsImMiOjh9" frameborder="5" allowFullScreen="true"></iframe>
+    </div>
 
-<iframe width="650" height="500" src="MA_MarkettrendLineChart.html" seamless></iframe> <!-- HTML5-->
+        
+<br /><br />
 
-<!--Länk till HTML-fil med sol och temperatur visualisering, hämtas lokalt från mappen-->
-
-<iframe width="650" height="500" src="MA_Population_StackedBarChart.html" seamless></iframe> <!-- HTML5-->
-
-<!--Länk till HTML-fil med befolkningsdata, hämtas lokalt från mappen-->
-  
-<iframe width="650" height="500" src="MA_WeatherScatterPlot.html" seamless></iframe> <!-- HTML5-->
 
 </body>
+    
 </html>
