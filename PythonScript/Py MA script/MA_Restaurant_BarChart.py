@@ -1,6 +1,5 @@
-#Import av bokeh-funktioner som används i barchart
+#Import av bokeh-funktioner och panda
 import pandas as pd
-#import numpy as np TA BORT??
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import ColumnDataSource
 from bokeh.models.tools import HoverTool
@@ -11,26 +10,23 @@ import openpyxl
 import xlrd
 
 
-#sparar ner sql-datan i en panda dataframe
-# Måste ange columnnamnen att läsa in i det fall de innehåller siffror.
+#läser in exceldata i en panda dataframe. Nödvändigt att ange kolumnnamn då de innehåller siffror
 df = pd.read_excel('Data\RestaurantRevenue_data.xlsx', names = ['Kategori', '2017', '2018'])      
 
+#outputfil för visualisering i HTML
 output_file("MA_Restaurant_BarChart.html")
 
-# data = df.to_dict(orient='list') TA BORT???
-# print(data) TA BORT??
-
+#sätter index
 idx = df['Kategori'].tolist()
-#print(idx)
 
 source = ColumnDataSource(df)
 
-
+#bokeh graf kod
 p = figure(x_range=idx, y_range=(0, df[['2017', '2018']].values.max() + 5), 
            plot_height=480, title="Sales per category and year", 
            toolbar_location=None, tools="")
 
-
+#kod för indivuduella staplar
 p.vbar(x=dodge('Kategori', -0.12, range=p.x_range), top='2017', width=0.2, source=source,
        color="#c9d9d3", legend=value("2017"))
 
@@ -44,4 +40,5 @@ p.legend.location = 'top_left'
 p.legend.orientation = 'horizontal'
 p.xaxis.major_label_orientation = pi/4
 
+#visa graf i fönster
 show(p)
