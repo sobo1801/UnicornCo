@@ -32,14 +32,14 @@ p.circle(x='Solskenssekunder_avg', y='Vindhastighet_avg',
          fill_color=transform('Temepratur_avg', mapper))
 
 color_bar = ColorBar(color_mapper=mapper, location=(0, 0),
-                     title = 'Genomsnittling Temperatur',
+                     title = 'Temp °C',
                      ticker=BasicTicker(desired_num_ticks=len(colors)))
 
 p.add_layout(color_bar, 'right')
 
-p.title.text = 'Geografisk data'
-p.xaxis.axis_label = 'Genomsnittlig soltid, sek'
-p.yaxis.axis_label = 'Genomsnittlig vindhastighet, ms'
+p.title.text = 'Väderdata per stad'
+p.xaxis.axis_label = 'Genomsnittlig soltid, min/h'
+p.yaxis.axis_label = 'Genomsnittlig vindhastighet, m/s'
 
 hover = HoverTool()
 hover.tooltips=[

@@ -27,7 +27,7 @@ source = ColumnDataSource(df)
 
 
 p = figure(x_range=idx, y_range=(0, df[['2017', '2018']].values.max() + 5), 
-           plot_height=480, title="Sales per category and year", 
+           plot_height=480, title='Omsättning per kategori och år', 
            toolbar_location=None, tools="")
 
 
@@ -40,8 +40,11 @@ p.vbar(x=dodge('Kategori',  0.12,  range=p.x_range), top='2018', width=0.2, sour
 
 p.x_range.range_padding = 0.2
 p.xgrid.grid_line_color = None
-p.legend.location = 'top_left'
+p.legend.location = 'top_right'
 p.legend.orientation = 'horizontal'
 p.xaxis.major_label_orientation = pi/4
+p.xaxis.axis_label = 'Kategori'
+p.yaxis.axis_label = 'Omsättning mSEK'
+
 
 show(p)
