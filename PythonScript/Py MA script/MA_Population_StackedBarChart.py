@@ -16,7 +16,7 @@ from bokeh.io import show, output_file
   
 
 # läs in data i panda dataframe 
-df_befolkning = pd.read_csv('Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
+df_befolkning = pd.read_csv('UnicornCo\Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
 
 df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
 
