@@ -1,12 +1,22 @@
-.header{
-    padding: 40px;
-    text-align: center;
+body {
+    margin: 0px;
+    margin-right: 0px;
     background-color: beige;
+    padding-left: 200px;
+    padding-right: 0px;
+    text-align: center
+  }
+
+.header{
+    padding: 10px;
+    text-align: center;
+    background-color: #ddddd0;
     color: black;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-bottom: 1px solid gray;
-    width: 100%;
+    border-bottom: 2px solid gray;
+    margin-right: 0px;
+    width: 100%
 }
 
 
@@ -15,12 +25,14 @@
     width: 200px;
     position: fixed; 
     z-index: 1; 
-    top: auto; 
+    top: 0px; 
     left: 0;
-    background-color: beige; 
+    background-color: #ddddd0; 
     overflow-x: hidden; 
-    padding-top: 60px;
+    margin-top: 0px;
+    padding-top: 250px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-right: 2px solid gray;
   }
 
   
@@ -38,15 +50,6 @@
   }
   
 
-#intro p {
-    column-count: 2;
-    column-width: 100%;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -59,37 +62,22 @@
     flex: 70%;
 }
 
-footer {
-  background-color: beige;
-  border-top: 1px solid grey;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
-.left{
-  text-align: left;
-  margin-top: 0%;
-  flex: 50%;
-  padding-left: 40px;
-  margin-bottom: 60px;
+#weather{
+    background-color: beige
 }
-
-.right{
-  text-align: right;
-  margin-top: 0%;
-  flex: 50%;
-  padding-right: 40px;
- 
+#population{
+    background-color: beige
 }
-
-img {
-  float: right;
-  overflow: auto;
+#markettrend{
+    background-color: beige
 }
-
-body {
-  margin: 0px;
-  margin-left: 200px;
-  background-color: beige;
-  padding-left: 40px;
-  padding-right: 80px;
+#categories{
+    background-color: beige
+}
+#restaurantmap{
+    background-color: beige
+}
+#kpi_dash{
+    background-color: beige
 }
