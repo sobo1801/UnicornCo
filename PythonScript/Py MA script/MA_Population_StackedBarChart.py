@@ -14,15 +14,17 @@ from bokeh.core.properties import value
 from bokeh.io import show, output_file
 
   
+
 # läs in data i panda dataframe 
 df_befolkning = pd.read_csv('Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
+
 df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
 
 #hämta ut data från dataframe i listor för data, regioner och kategorier
 data = df_befolkning.to_dict(orient='list')
 Regions = df_befolkning['Region'].tolist()
 categories = df_befolkning.columns.values[2:].tolist()
-colors = ['#c9d9d3', '#718dbf', '#f4a582']
+colors = ['#c9d9d3', '#718dbf', '#01665e']
 
 source = ColumnDataSource(data)
 
