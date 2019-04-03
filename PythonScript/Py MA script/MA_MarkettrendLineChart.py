@@ -12,17 +12,15 @@ import xlrd
 #sparar ner sql-datan i en panda dataframe
 df = pd.read_excel('Data\RestaurantTrend_data.xlsx')
 
+#outputfil i html för graf som genereras av Pythonscript
 output_file("MA_MarkettrendLineChart.html")
 
 #Går ej att läsa in årtalen som en x_range i figuren så därav omvandlar vi dem till en lista först.
 df['År'] = list(map(str, df['År']))
 
-#print(df)
 
-#Här skriver du kod för att hantera ditt dataset som är sparat i df
-
-#Här skriver du din Bokeh Api-kod
-p = figure(x_range=df['År'], plot_height=480 , title = 'Restaurangtrender, procentuell förändring per år',
+#bokehkod för att genrera plot
+p = figure(x_range=df['År'], plot_height=480 , title = 'Restaurangtrender, procentuell förändring',
            toolbar_location="above")
 
 
@@ -49,4 +47,5 @@ p.yaxis.axis_label = 'Procent'
 #Möjliggör att välja bort vissa kategorier och bara visa de vi vill
 p.legend.click_policy="hide"
 
+#visa graf i fönster
 show(p)
