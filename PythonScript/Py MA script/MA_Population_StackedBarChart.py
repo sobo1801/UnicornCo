@@ -43,6 +43,7 @@ p.legend.orientation = 'horizontal'
 p.xaxis.major_label_orientation = 3.14/4
 p.xaxis.axis_label = 'Region'
 p.yaxis.axis_label = 'Befolkning'
+p.yaxis[0].formatter = NumeralTickFormatter(format="0,0")
 
 #outputfil i HTML för bokehgraf
 output_file('MA_Population_StackedBarChart.html')
