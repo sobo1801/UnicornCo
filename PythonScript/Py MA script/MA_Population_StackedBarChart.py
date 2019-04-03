@@ -15,13 +15,13 @@ from bokeh.io import show, output_file
 
   
 # read data in dataframe 
-df_befolkning = pd.read_csv('UnicornCo\Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
+df_befolkning = pd.read_csv('Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
 df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
 
 data = df_befolkning.to_dict(orient='list')
 Regions = df_befolkning['Region'].tolist()
 categories = df_befolkning.columns.values[2:].tolist()
-colors = ['#c9d9d3', '#718dbf', '#e84d60']
+colors = ['#c9d9d3', '#718dbf', '#f4a582']
 
 source = ColumnDataSource(data)
 
