@@ -20,7 +20,7 @@ df['År'] = list(map(str, df['År']))
 
 
 #bokehkod för att genrera plot
-p = figure(x_range=df['År'], plot_height=480 , title = 'Mattrender, procentuell förändring',
+p = figure(x_range=df['År'], plot_height=480 , title = 'Restaurangtrender, procentuell förändring',
            toolbar_location="above")
 
 
@@ -41,6 +41,8 @@ p.legend.location = 'bottom_left'
 p.legend.orientation = "vertical"
 p.legend.label_text_font_size = '8pt'
 p.legend.spacing = 0
+p.xaxis.axis_label = 'År'
+p.yaxis.axis_label = 'Procent'
 
 #Möjliggör att välja bort vissa kategorier och bara visa de vi vill
 p.legend.click_policy="hide"

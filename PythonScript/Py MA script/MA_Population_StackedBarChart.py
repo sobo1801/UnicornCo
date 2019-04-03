@@ -26,8 +26,9 @@ colors = ['#c9d9d3', '#718dbf', '#f4a582']
 
 source = ColumnDataSource(data)
 
+
 #skapa bokehplot
-p = figure(x_range=Regions, plot_height=480, title='Befolkning per region',
+p = figure(x_range=Regions, plot_height=480, title='Befolkning 2018 per region',
            toolbar_location=None, tools='hover', tooltips='$name : @$name')
 
 p.vbar_stack(categories, x='Region', width=0.9, color=colors, source=source, legend=[['0-24 år'],['25-64 år'],['65+ år']])
