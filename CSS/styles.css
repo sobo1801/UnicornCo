@@ -71,28 +71,91 @@ body {
   .over{
     text-align: center
   }
-  
   .under{
-    text-align: left
+    text-align: center
   }
 
 #weather{
     background-color: beige;
     margin-top: 150px
 }
+#textcolorweather{
+  color: beige;
+  font-weight: bold;
+  font-size: 30px
+}
+#buttonweather{
+  font-family: 'Courier New', Courier, monospace; 
+  color: darkslategray;
+  font-size: 30px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: beige;
+  font-weight: bold
+}
+
 #population{
     background-color: beige;
     margin-top: 150px
 }
+#textcolorpopulation{
+  color: beige;
+  font-weight: bold;
+  font-size: 30px
+}
+#buttonpopulation{
+  font-family: 'Courier New', Courier, monospace; 
+  color: darkslategray;
+  font-size: 30px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: beige;
+  font-weight: bold
+}
+
 #markettrend{
     background-color: beige;
     margin-top: 150px;
     padding-left: 20px
 }
+#textcolorrestaurant{
+  color: beige;
+  font-weight: bold;
+  font-size: 30px
+}
+#buttonrestaurant{
+  font-family: 'Courier New', Courier, monospace; 
+  color: darkslategray;
+  font-size: 30px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: beige;
+  font-weight: bold
+}
+
 #restaurantmap{
     background-color: beige;
     margin-top: 150px
 }
+#textcolormap{
+  color: beige;
+  font-weight: bold;
+  font-size: 30px
+}
+#buttonmap{
+  font-family: 'Courier New', Courier, monospace; 
+  color: darkslategray;
+  font-size: 30px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: beige;
+  font-weight: bold
+}
+
 #kpi_dash{
     background-color: beige;
     margin-top: 150px
