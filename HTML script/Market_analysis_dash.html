@@ -35,11 +35,12 @@
         </div> 
       </div>
       <div class="right">
-        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vårt val:</span></h2>
-        <p>&#187; Karlskrona</p> 
-        <p>&#187; bla</p>
-        <p>&#187; bla</p> 
-      </div>
+        <button id="buttonweather" type="button" onclick="changeweather()">Vår slutsats:</button>
+        <div id="textcolorweather">  
+          <p>&#187; Karlskrona </p>
+          <p>&#187; bla</p> 
+          <p>&#187; bla</p>
+        </div>
     </div>
 
     <div class="main">
@@ -51,11 +52,12 @@
         </div>
       </div>
       <div class="right">
-        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vårt val:</span></h2>
-        <p>&#187; Stockholms län</p> 
-        <p>&#187; Västra Götalands län</p>
-        <p>&#187; Skånes län</p> 
-      </div>
+        <button id="buttonpopulation" type="button" onclick="changepopulation()">Vår slutsats:</button>
+        <div id="textcolorpopulation">  
+          <p>&#187; Stockholms län</p> 
+          <p>&#187; Västra Götalands län</p>
+          <p>&#187; Skånes län</p> 
+        </div>    
     </div>
 
     <div class="main">
@@ -68,7 +70,12 @@
         </div>
       </div>
       <div class="under">
-        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vårt val:</span></h2>
+        <button id="buttonrestaurant" type="button" onclick="changerestaurant()">Vår slutsats:</button>
+        <div id="textcolorrestaurant">  
+          <p>&#187; bla</p>
+          <p>&#187; bla</p> 
+          <p>&#187; bla</p>
+        </div>
       </div>
     </div>
 
@@ -81,7 +88,12 @@
         </div>
       </div>
       <div class="right">
-        <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vårt val:</span></h2>
+        <button id="buttonmap" type="button" onclick="changemap()">Vår slutsats:</button>
+        <div id="textcolormap">  
+          <p>&#187; Karlskrona </p>
+          <p>&#187; bla</p> 
+          <p>&#187; bla</p>
+        </div>
       </div>
     </div>
 
@@ -94,5 +106,34 @@
 
 
   </body>
+  <script type='text/javascript'>
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changeweather() {
+      var x = document.getElementById("textcolorweather");
+      x.style.color = colors[i++ % colors.length];
+    }
     
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changepopulation() {
+      var x = document.getElementById("textcolorpopulation");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changerestaurant() {
+      var x = document.getElementById("textcolorrestaurant");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changemap() {
+      var x = document.getElementById("textcolormap");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+    </script>   
 </html>
