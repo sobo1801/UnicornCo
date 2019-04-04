@@ -52,19 +52,29 @@ body {
     color: #ef8a62;
   }
   
-/*
-.row {
+  .main {
     display: flex;
     flex-wrap: wrap;
-}
-.side {
-    flex: 30%;
-}
-
-.main {
+    padding-left: 30px
+  }
+  .left {
     flex: 70%;
-}
-*/
+  }
+  
+  .right {
+    flex: 30%;
+    padding-top: 250px;
+    color: #ef8a62;
+    font-size: 25px;
+  }
+  
+  .over{
+    text-align: center
+  }
+  
+  .under{
+    text-align: left
+  }
 
 #weather{
     background-color: beige;
