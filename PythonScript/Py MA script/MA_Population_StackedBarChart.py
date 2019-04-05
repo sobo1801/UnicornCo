@@ -8,21 +8,22 @@ Created on Thu Mar 28 14:06:04 2019
 
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
-from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter, FactorRange, NumeralTickFormatter
-from bokeh.models.tools import HoverTool
-from bokeh.core.properties import value
-from bokeh.io import show, output_file
-
+from bokeh.models import ColumnDataSource, NumeralTickFormatter
   
 
 # läs in data i panda dataframe 
 df_befolkning = pd.read_csv('UnicornCo\Data\Befolkningsdata2018.csv', encoding = 'ISO-8859-1') 
 
+#sortera i storleksordning
 df_befolkning = df_befolkning.sort_values(by='25-64 år', ascending=False)
+
+#filtrera ut de regioner som innehåller våra toppstationer Nordkoster, Visby, Öland, Hoburgen, Karlskrona 
+region_filter = ['Gotlands län', 'Västra Götalands län', 'Kalmar län', 'Blekinge län']
+utvalda_regioner = df_befolkning[df_befolkning['Region'].isin(region_filter)]
 
 #hämta ut data från dataframe i listor för data, regioner och kategorier
 data = df_befolkning.to_dict(orient='list')
-Regions = df_befolkning['Region'].tolist()
+Regions = utvalda_regioner['Region'].tolist()
 categories = df_befolkning.columns.values[2:].tolist()
 colors = ['#c9d9d3', '#718dbf', '#01665e']
 
