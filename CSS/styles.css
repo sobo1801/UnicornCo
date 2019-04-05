@@ -69,10 +69,34 @@ body {
   }
   
   .over{
-    text-align: center
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 30px
   }
+  .overleft{
+    flex: 90%;
+  }
+  .overright{
+    flex: 10%;
+    padding-top: 250px;
+    font-size: 12px;
+    text-align: left
+  
+  }
+
   .under{
-    text-align: center
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 30px
+  }
+  .underleft{
+    text-align: left;
+    padding-right: 400px
+  }
+  .underright{
+    text-align: right
   }
 
 #weather{
@@ -136,24 +160,24 @@ body {
   font-weight: bold
 }
 
-#restaurantmap{
-    background-color: beige;
-    margin-top: 150px
-}
-#textcolormap{
-  color: beige;
-  font-weight: bold;
-  font-size: 30px
-}
-#buttonmap{
-  font-family: 'Courier New', Courier, monospace; 
-  color: darkslategray;
-  font-size: 30px;
-  margin: 10px;
-  border: none;
-  outline: none;
+#analys{
   background-color: beige;
-  font-weight: bold
+  margin-top: 150px
+}
+#textcoloranalys{
+color: beige;
+font-weight: bold;
+font-size: 30px
+}
+#buttonanalys{
+font-family: 'Courier New', Courier, monospace; 
+color: darkslategray;
+font-size: 30px;
+margin: 10px;
+border: none;
+outline: none;
+background-color: beige;
+font-weight: bold
 }
 
 #competitor{
@@ -174,6 +198,26 @@ border: none;
 outline: none;
 background-color: beige;
 font-weight: bold
+}
+
+#restaurantmap{
+    background-color: beige;
+    margin-top: 150px
+}
+#textcolormap{
+  color: beige;
+  font-weight: bold;
+  font-size: 30px
+}
+#buttonmap{
+  font-family: 'Courier New', Courier, monospace; 
+  color: darkslategray;
+  font-size: 30px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: beige;
+  font-weight: bold
 }
 
 #kpi_dash{
