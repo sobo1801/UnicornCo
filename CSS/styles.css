@@ -2,7 +2,7 @@ body {
   margin: 0px;
   margin-right: 0px;
   margin-left: 0px;
-  background-color: beige;
+  background-color: whitesmoke;
   padding-left: 170px;
   padding-right: 0px;
   text-align: center;
@@ -66,41 +66,25 @@ body {
 
 .over{
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 30px
-}
-.overleft{
-  flex: 90%;
+
 }
 .overright{
-  flex: 10%;
-  padding-top: 250px;
-  font-size: 12px;
-  text-align: left
+  text-align: right;
+  padding-top: 10px;
 }
 
 .under{
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 30px
-}
-.underleft{
-  text-align: left;
-  padding-right: 400px
-}
-.underright{
-  text-align: right
+  padding-left: 200px
 }
 
 /*CSS för de olika ID, knapp och textrutor.*/
 #weather{
-  background-color: beige;
+  background-color: whitesmoke;
   margin-top: 150px
 }
 #textcolorweather{
-color: beige;
+color: whitesmoke;
 font-weight: bold;
 font-size: 30px
 }
@@ -111,16 +95,16 @@ font-size: 30px;
 margin: 10px;
 border: none;
 outline: none;
-background-color: beige;
+background-color: whitesmoke;
 font-weight: bold
 }
 
 #population{
-  background-color: beige;
+  background-color: whitesmoke;
   margin-top: 150px
 }
 #textcolorpopulation{
-color: beige;
+color: whitesmoke;
 font-weight: bold;
 font-size: 30px
 }
@@ -131,17 +115,17 @@ font-size: 30px;
 margin: 10px;
 border: none;
 outline: none;
-background-color: beige;
+background-color: whitesmoke;
 font-weight: bold
 }
 
 #markettrend{
-  background-color: beige;
+  background-color: whitesmoke;
   margin-top: 150px;
   padding-left: 20px
 }
 #textcolorrestaurant{
-color: beige;
+color: whitesmoke;
 font-weight: bold;
 font-size: 30px
 }
@@ -152,36 +136,16 @@ font-size: 30px;
 margin: 10px;
 border: none;
 outline: none;
-background-color: beige;
-font-weight: bold
-}
-
-#analys{
-background-color: beige;
-margin-top: 150px
-}
-#textcoloranalys{
-color: beige;
-font-weight: bold;
-font-size: 30px
-}
-#buttonanalys{
-font-family: 'Courier New', Courier, monospace; 
-color: darkslategray;
-font-size: 30px;
-margin: 10px;
-border: none;
-outline: none;
-background-color: beige;
+background-color: whitesmoke;
 font-weight: bold
 }
 
 #competitor{
-background-color: beige;
+background-color: whitesmoke;
 margin-top: 150px
 }
 #textcolorcompetitor{
-color: beige;
+color: whitesmoke;
 font-weight: bold;
 font-size: 30px
 }
@@ -192,32 +156,20 @@ font-size: 30px;
 margin: 10px;
 border: none;
 outline: none;
-background-color: beige;
+background-color: whitesmoke;
 font-weight: bold
 }
 
 #restaurantmap{
-  background-color: beige;
+  background-color: whitesmoke;
+  padding-left: 50px;
   margin-top: 150px
-}
-#textcolormap{
-color: beige;
-font-weight: bold;
-font-size: 30px
-}
-#buttonmap{
-font-family: 'Courier New', Courier, monospace; 
-color: darkslategray;
-font-size: 30px;
-margin: 10px;
-border: none;
-outline: none;
-background-color: beige;
-font-weight: bold
+
 }
 
 /*CSS för KPI dashboard*/
 #kpi_dash{
-  background-color: beige;
+  background-color: whitesmoke;
+  padding-left: 50px;
   margin-top: 150px
 }
