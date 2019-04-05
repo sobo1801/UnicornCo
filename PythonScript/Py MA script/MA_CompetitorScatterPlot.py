@@ -5,6 +5,10 @@ import bs4 as bs
 import re
 from pandas import DataFrame
 from time import sleep
+from bokeh.models.tools import HoverTool
+import numpy as np
+from bokeh.plotting import figure, output_file, show
+from bokeh.models import ColumnDataSource
 
 #url till sida att skrapa
 url = 'https://www.tripadvisor.se/Restaurants-g189843-Karlskrona_Blekinge_County.html#EATERY_OVERVIEW_BOX'

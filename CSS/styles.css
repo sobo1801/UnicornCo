@@ -22,7 +22,6 @@ body {
     width: 100%
 }
 
-
 .sidenav {
     height: 100%; 
     width: 170px;
@@ -36,9 +35,7 @@ body {
     padding-top: 250px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-right: 2px solid gray
-  }
-
-  
+  }  
   .sidenav a {
     padding: 2px 8px 6px 16px;
     text-decoration: none;
@@ -46,8 +43,6 @@ body {
     color: #01665e;
     display: block;
   }
-  
-  
   .sidenav a:hover {
     color: #ef8a62;
   }
@@ -60,7 +55,6 @@ body {
   .left {
     flex: 70%;
   }
-  
   .right {
     flex: 30%;
     padding-top: 250px;
@@ -82,7 +76,6 @@ body {
     padding-top: 250px;
     font-size: 12px;
     text-align: left
-  
   }
 
   .under{
