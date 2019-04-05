@@ -22,6 +22,7 @@ body {
     width: 100%
 }
 
+/*CSS för meny*/
 .sidenav {
     height: 100%; 
     width: 170px;
@@ -47,6 +48,7 @@ body {
     color: #ef8a62;
   }
   
+  /*CSS där content visas*/
   .main {
     display: flex;
     flex-wrap: wrap;
@@ -92,6 +94,7 @@ body {
     text-align: right
   }
 
+  /*CSS för de olika ID, knapp och textrutor.*/
 #weather{
     background-color: beige;
     margin-top: 150px
@@ -213,6 +216,7 @@ font-weight: bold
   font-weight: bold
 }
 
+/*CSS för KPI dashboard*/
 #kpi_dash{
     background-color: beige;
     margin-top: 150px
