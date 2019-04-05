@@ -156,6 +156,26 @@ body {
   font-weight: bold
 }
 
+#competitor{
+  background-color: beige;
+  margin-top: 150px
+}
+#textcolorcompetitor{
+color: beige;
+font-weight: bold;
+font-size: 30px
+}
+#buttoncompetitor{
+font-family: 'Courier New', Courier, monospace; 
+color: darkslategray;
+font-size: 30px;
+margin: 10px;
+border: none;
+outline: none;
+background-color: beige;
+font-weight: bold
+}
+
 #kpi_dash{
     background-color: beige;
     margin-top: 150px
