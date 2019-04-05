@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 28 14:06:04 2019
-
-@author: sofia
-"""
 #importera panda och bokeh
 
 import pandas as pd
