@@ -68,10 +68,10 @@ output_file('MA_CompetitorScatterPlot.html')
 
 source = ColumnDataSource(df_konkurrenter)
 
-p = figure(toolbar_location="above", plot_height=480, x_range=(0, 5.2), y_range=(-0.3,4.3))
+p = figure(toolbar_location="above", plot_height=480, x_range=(0, 5.2), y_range=(-0.3,3.99))
 p.circle(x='Rating', y='Price',
          source=source,
-         size=20, color='navy')
+         size=20, color='navy', alpha=0.3)
 
 p.title.text = 'Jämförelse av restauranger i Karlskrona'
 p.xaxis.axis_label = 'Betyg'
