@@ -10,7 +10,7 @@ import xlrd
 
 
 #sparar ner sql-datan i en panda dataframe
-df = pd.read_excel('UnicornCo\Data\RestaurantTrend_data.xlsx')
+df = pd.read_excel('Data\RestaurantTrend_data.xlsx')
 
 #outputfil i html för graf som genereras av Pythonscript
 output_file("MA_MarkettrendLineChart.html")

@@ -25,7 +25,7 @@ kategorier = ([i.text for i in tripadvisor_soup.find_all("a", class_ = "item cui
 
 #funktion för att hämta ut unika kategorier
 def unique(kategorier):
-    """funktionen hämtar ut alla unika kategorier"""
+    "funktionen hämtar ut alla unika kategorier"
     # skapa en tom lista att lagra de unika värdena
     unique_list = [] 
     # itererar igenom alla kategorier och lägger till i den toma listan om de inte redan finns med
