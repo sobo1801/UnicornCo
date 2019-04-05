@@ -1,1 +1,204 @@
-<!--Det kommer tillbaka i nästa push-->
+<!DOCTYPE html>
+<html lang="en">
+        
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Market_analysis_dash</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\Malin\Desktop\BI-Programspråk\Gruppuppgift\UnicornCo\CSS\styles.css"> <!--länk till css-filen, då det krånglar "Copy path"-->
+  </head>
+
+  <body> 
+    
+    <!--HTML kod för att skapa headern-->
+    <div class="header" id="start">
+      <h1><span style="color:#01665e">Marketing Analysis Dashboard</span></h1>
+      <p><span style="font-style:italic; color:#ef8a62">- Vi kommer med solsken till er! -</span></p>  
+    </div>
+    
+    <!--HTML kod för att skapa menyn på vänster sida-->
+    <div class="sidenav">
+      <a href="#start">Start</a><br />
+      <a href="#weather">Väder</a><br />
+      <a href="#population">Befolkning</a><br />
+      <a href="#markettrend">Restaurangtrend</a><br />
+      <a href="#competitor">Konkurrentanalys</a><br />
+      <a href="#restaurantmap">Placering</a><br />
+      <a href="#kpi_dash">Framtida KPI:er</a>
+    </div>
+
+    <!--Kodstycke som visar väder-grafen. Grafer, knappar och placering-->
+    <div class="main">
+      <div class="left">
+        <div id="weather">
+          <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Var i Sverige ska vi etablera oss baserat på våra väder krav?</span></h2>
+          <!--Länk till HTML-fil väderdata, med sol och teperatur, skapade i Bokeh. Hämtas lokalt från mappen-->
+          <iframe allowtransparency="true" style="background: #FFFFFF" width="615" height="500" src="MA_WeatherScatterPlot.html" seamless></iframe> <!-- HTML5-->
+        </div> 
+      </div>
+      <div class="right">
+        <button id="buttonweather" type="button" onclick="changeweather()">Vår slutsats:</button>
+        <div id="textcolorweather">  
+          <p>&#187; Karlskrona </p>
+          <p>&#187; bla</p> 
+          <p>&#187; bla</p>
+        </div>
+      </div>
+
+      <!--Kodstycke som visar befolknings-grafen. Grafer, knappar och placering-->
+      <div class="main">
+        <div class="left">
+          <div id="population">
+            <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vilken/Vilka kund grupper ska vi rikta oss till?</span></h2>
+            <!--Länk till HTML-fil med befolkningsmängd i olika län, hämtas lokalt från mappen-->
+            <iframe allowtransparency="true" style="background: #FFFFFF" width="615" height="500" src="MA_Population_StackedBarChart.html" seamless></iframe> <!-- HTML5-->
+          </div>
+        </div>
+        <div class="right">
+          <button id="buttonpopulation" type="button" onclick="changepopulation()">Vår slutsats:</button>
+          <div id="textcolorpopulation">  
+            <p>&#187; Stockholms län</p> 
+            <p>&#187; Västra Götalands län</p>
+            <p>&#187; Skånes län</p> 
+          </div>    
+        </div>
+
+        <!--Kodstycke som visar restaurangtyper- och omsaättnings-grafer. Grafer, knappar och placering-->
+        <div class="main">
+          <div class="over">
+            <div id="markettrend">
+              <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vilken typ av restaurang ska vi öppna baserat på omsättningsutveckling?</span></h2>
+              <!--Länk till HTML-fil med marknadstrend-graf, hämtas lokalt från mappen-->
+              <iframe allowtransparency="true" style="background: #FFFFFF" width="620" height="515" src="MA_MarkettrendLineChart.html" seamless></iframe> <!-- HTML5-->
+              <!--Länk till HTML-fil med omsättnings-graf, hämtas lokalt från mappen-->
+              <iframe allowtransparency="true" style="background: #FFFFFF" width="620" height="515" src="MA_Restaurant_BarChart.html" seamless></iframe>
+            </div>
+          </div>
+          <div class="under">
+            <button id="buttonrestaurant" type="button" onclick="changerestaurant()">Vår slutsats:</button>
+            <div id="textcolorrestaurant">  
+              <p>&#187; bla</p>
+              <p>&#187; bla</p> 
+              <p>&#187; bla</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Kodstycke som visar konkurrens-grafer. Grafer, knappar och placering-->
+        <div class="main">
+          <div class="over">
+            <div class="overleft">
+              <div id="competitor">
+                <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">HUr ser prissättingen ut för konkurrenterna?</span></h2>
+                <!--Länk till HTML-fil med ...graf, hämtas lokalt från mappen-->
+                <iframe allowtransparency="true" style="background: #FFFFFF" width="620" height="515" src="MA_CompetitorScatterPlot.html" seamless></iframe>
+                <!--Länk till HTML-fil med konkurrens-scatterplot, hämtas lokalt från mappen-->
+                <iframe allowtransparency="true" style="background: #FFFFFF" width="620" height="515" src="MA_CompetitorScatterPlot.html" seamless></iframe>
+              </div>
+            </div>
+            <!--Informationstext med prisnivåer, komplement till konkurrens-scatterplotten-->
+            <div class="overright">
+              <h4><span style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Prisnivåer</span></h4> 
+              <span style="font-family: 'Courier New', Courier, monospace; color: darkslategray">0 = Prisnivå saknas</span> <br />
+              <span style="font-family: 'Courier New', Courier, monospace; color: darkslategray">1 = Billigt hak</span> <br />
+              <span style="font-family: 'Courier New', Courier, monospace; color: darkslategray">2 = Mellanklass</span> <br />
+              <span style="font-family: 'Courier New', Courier, monospace; color: darkslategray">3 = Finare middag</span> 
+            </div>  
+          </div>
+          <div class="under">
+            <div class="underleft">
+              <button id="buttonanalys" type="button" onclick="changeanalys()">Analys:</button>
+                <div id="textcoloranalys">  
+                  <p>&#187; bla </p>
+                  <p>&#187; bla</p> 
+                  <p>&#187; bla</p>
+                </div>
+              </div>
+
+            <div class="underright">
+              <button id="buttoncompetitor" type="button" onclick="changecompetitor()">Vår slutsats:</button>
+              <div id="textcolorcompetitor">  
+                <p>&#187; bla </p>
+                <p>&#187; bla</p> 
+                <p>&#187; bla</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!--Kodstycke som visar karta över restauranger i vald stad. Grafer, knappar och placering-->
+        <div class="main">
+          <div class="left">
+            <div id="restaurantmap">
+              <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Vilka konkurrenter finns i området?</span></h2>
+              <!--Länk till HTML-fil med karta, hämtas lokalt från mappen-->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d71045.45823346147!2d15.555230713653385!3d56.18872957190251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skarlskrona+restauranger!5e0!3m2!1ssv!2sse!4v1554292111001!5m2!1ssv!2sse" width="600" height="450" frameborder="2" style="border:2" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="right">
+            <button id="buttonmap" type="button" onclick="changemap()">Vår slutsats:</button>
+            <div id="textcolormap">  
+              <p>&#187; bla </p>
+              <p>&#187; bla</p> 
+              <p>&#187; bla</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Kodstycke som visar dashboard, över framtida KPI:er. Grafer, knappar och placering-->
+        <div id="kpi_dash">
+          <h2><span Style="font-family: 'Courier New', Courier, monospace; color: darkslategray">Dashboard & KPI - en ljus framtid</span></h2>
+          <!--Länk till HTML-fil med framptida KPI:er, hämtas lokalt från mappen-->
+          <iframe allowtransparency="true" style="background: #FFFFFF" src="KPI_Grid.html" width="1208" height="850" frameborder="2" style="border:2" allowfullscreen></iframe> 
+        </div>  
+        <br /><br />
+  </body>
+
+  <!--Javascript för knappar och text hantering i de olika klasserna i HTML-->
+  <script type='text/javascript'>
+
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changeweather() {
+      var x = document.getElementById("textcolorweather");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changepopulation() {
+      var x = document.getElementById("textcolorpopulation");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changerestaurant() {
+      var x = document.getElementById("textcolorrestaurant");
+      x.style.color = colors[i++ % colors.length];
+    }
+
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changeanalys() {
+      var x = document.getElementById("textcoloranalys");
+      x.style.color = colors[i++ % colors.length];
+    }
+
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changecompetitor() {
+      var x = document.getElementById("textcolorcompetitor");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+    var colors = ['#ef8a62'];
+    var i = 0;
+    function changemap() {
+      var x = document.getElementById("textcolormap");
+      x.style.color = colors[i++ % colors.length];
+    }
+    
+  </script>   
+</html>
