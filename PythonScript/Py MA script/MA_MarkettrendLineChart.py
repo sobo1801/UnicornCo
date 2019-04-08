@@ -20,7 +20,7 @@ df['År'] = list(map(str, df['År']))
 
 
 #bokehkod för att genrera plot
-p = figure(x_range=df['År'], plot_height=480, plot_width=608, title = 'Restaurangtrender, procentuell förändring',
+p = figure(x_range=df['År'], plot_height=480, plot_width=608, title = 'Restaurangtrender, indexutveckling',
            toolbar_location="above")
 
 
